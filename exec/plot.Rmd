@@ -1,0 +1,15 @@
+---
+title: "plot data"
+output: html_document
+---
+
+This file was rendered via snakemake.
+
+
+```{r}
+save.image('debug/plot.Rdata')
+
+df = feather::read_feather(snakemake@input[[1]])
+
+easyalluvial::alluvial_wide(df, fill_by = 'last_variable')
+```
