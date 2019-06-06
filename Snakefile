@@ -3,10 +3,9 @@ configfile: 'config.yaml'
 
 rule all:
     input:
-        # 'feather/data.feather'
         'html/plot.html'
         , 'png/plot2.png'
-        , 'html/plot3.ipynb'
+        , 'html/plot3.html'
 
 
 rule load_dataset:
@@ -19,7 +18,7 @@ rule load_dataset:
     script:
         'exec/load.py'
 
-rule plot_data:
+rule plot_rmd_direct:
     conda:
         'envs/snake_minimal_macos.yml'
     input:
@@ -32,7 +31,7 @@ rule plot_data:
         'exec/plot.Rmd'
 
 
-rule plot_data2:
+rule plot_rmd_via_script:
     conda:
         'envs/snake_minimal_macos.yml'
     input:
@@ -46,7 +45,7 @@ rule plot_data2:
     script:
         'exec/plot2.R'
         
-rule execute_nb:
+rule plot_execute_nb_plot:
     conda:
         'envs/snake_minimal_macos.yml'
     input:
@@ -59,11 +58,13 @@ rule execute_nb:
     script:
         'exec/plot3.py'
         
-rule nb_2_html:
+rule plot_nb_2_html:
     conda:
         'envs/snake_minimal_macos.yml'
     input:
         'html/plot3.ipynb'
+    output:
+        'html/plot3.html'
     benchmark:
         'benchmark/plot_data3.txt'
     shell:
