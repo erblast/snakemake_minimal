@@ -57,11 +57,24 @@ snakemake --dag | dot -Tpng > ./wflow/wflow.png
 ## YAML configuration file
 `config.yaml`
 
+# Shell vs Scripts
+Scripts in `R` and `python` have access to a `snakemake` object carrying all rule
+parameters as attributes. However when shell commands can be constructed snakemake's
+parallel processing and logging capabilities can be leveraged.
 
-# R Scripts
+# R Scripts and Markdown
 R scripts can be added as `.R` or as `.Rmd`. When they are added as `.Rmd` they
 can only produce one single html-output file. A workaround is to use an intermediate
 R script as shown in rule `plot_data2`.
+
+**see rules `plot_rmd_direct` and `plot_rmd_via_script` in [Snakefile](https://github.com/erblast/snakemake_minimal/blob/master/Snakefile)**
+
+# Python Scripts and Jupyter Notebooks
+Python scripts can be added as `.py` files. We can use `papermill` to execute
+parametrized jupyter notebooks which we can then render as html. html is preferred
+to notebooks because there is no doubt about the execution state.
+
+**see rules `plot_execute_nb` and `plot_nb_2_html` [Snakefile](https://github.com/erblast/snakemake_minimal/blob/master/Snakefile)**
 
 
 ## Benchmarking
