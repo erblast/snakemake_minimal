@@ -65,7 +65,7 @@ parallel processing and logging capabilities can be leveraged.
 # R Scripts and Markdown
 R scripts can be added as `.R` or as `.Rmd`. When they are added as `.Rmd` they
 can only produce one single html-output file. A workaround is to use an intermediate
-R script as shown in rule `plot_data2`.
+R script as shown in rule.
 
 **see rules `plot_rmd_direct` and `plot_rmd_via_script` in [Snakefile](https://github.com/erblast/snakemake_minimal/blob/master/Snakefile)**
 
