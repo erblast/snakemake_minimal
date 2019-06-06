@@ -6,6 +6,8 @@ rule all:
         # 'feather/data.feather'
         'html/plot.html'
         , 'png/plot2.png'
+        , 'html/plot3.ipynb'
+
 
 rule load_dataset:
     output:
@@ -43,3 +45,26 @@ rule plot_data2:
         'benchmark/plot_data2.txt'
     script:
         'exec/plot2.R'
+        
+rule execute_nb:
+    conda:
+        'envs/snake_minimal_macos.yml'
+    input:
+        'nb/plot3.ipynb'
+        , 'feather/data.feather'
+    output:
+        temp('html/plot3.ipynb')
+    benchmark:
+        'benchmark/plot_data3.txt'
+    script:
+        'exec/plot3.py'
+        
+rule nb_2_html:
+    conda:
+        'envs/snake_minimal_macos.yml'
+    input:
+        'html/plot3.ipynb'
+    benchmark:
+        'benchmark/plot_data3.txt'
+    shell:
+        'jupyter nbconvert --to html {input}'

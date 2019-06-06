@@ -39,8 +39,13 @@ The conda environment will be reconstructed from `yml` file and stored in `./.sn
 A single conda environment can be defined for each rule.
 
 ```shell
+conda env export -f ./envs/snake_minimal_macos.yml
+```
+
+```shell
 snakemake --use-conda
 ```
+
 
 ## Visualize workflow
 ```shell
