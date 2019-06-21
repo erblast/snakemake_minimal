@@ -82,6 +82,8 @@ to notebooks because there is no doubt about the execution state.
 
 **see rules `plot_execute_nb` and `plot_nb_2_html` [Snakefile](https://github.com/erblast/snakemake_minimal/blob/master/Snakefile)**
 
+** the rules for rendering notebooks are not compatible with `nb_conda` as is.**
+
 
 ## Benchmarking
 Execution times of each rule are stored in `./benchmark`. Can be defined in `Snakefile`
