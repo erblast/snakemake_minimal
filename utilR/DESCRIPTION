@@ -1,0 +1,15 @@
+Package: embeddedR
+Title: embedded R package
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Björn",
+           family = "Koneswarakantha",
+           role = c("aut", "cre"),
+           email = "datistics@gmail.com")
+Description: Where R helper functions live and can be tested.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests:
+    testthat
+RoxygenNote: 6.1.1

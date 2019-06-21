@@ -6,7 +6,7 @@ rule all:
         'html/plot.html'
         , 'png/plot2.png'
         , 'html/plot3.html'
-
+        , 'testlog/check_utilR.txt'
 
 rule load_dataset:
     output:
@@ -69,3 +69,29 @@ rule plot_nb_2_html:
         'benchmark/plot_data3.txt'
     shell:
         'jupyter nbconvert --to html {input}'
+
+test_files, = glob_wildcards('utilR/tests/testthat/{test_file}.R')
+function_files, = glob_wildcards('utilR/R/{function_file}.R')
+
+rule test_utilR:
+    conda:
+        'envs/snake_minimal_macos.yml'
+    input:
+        expand('utilR/R/{function_file}.R', function_file = function_files)
+        , expand('utilR/tests/testthat/{test_file}.R', test_file = test_files)
+    output:
+        'testlog/test_utilR.txt'
+    shell:
+        "Rscript -e 'sink(\"{output}\")' -e 'devtools::test(\"./utilR\")' -e 'sink()'"
+        
+rule check_utilR:
+    conda:
+        'envs/snake_minimal_macos.yml'
+    input:
+        expand('utilR/R/{function_file}.R', function_file = function_files)
+        , expand('utilR/tests/testthat/{test_file}.R', test_file = test_files)
+        , 'testlog/test_utilR.txt'
+    output:
+        'testlog/check_utilR.txt'
+    shell:
+        "Rscript -e 'sink(\"{output}\")' -e 'devtools::check(\"./utilR\")' -e 'sink()'"

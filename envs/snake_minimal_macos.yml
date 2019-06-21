@@ -1,10 +1,10 @@
 name: snakemake_minimal
 channels:
-  - plotly
-  - defaults
-  - erblast
-  - conda-forge
   - bioconda
+  - plotly
+  - conda-forge
+  - erblast
+  - defaults
 dependencies:
   - _r-mutex=1.0.0=anacondar_1
   - aioeasywebdav=2.4.0=py36_1000
@@ -12,7 +12,7 @@ dependencies:
   - ansiwrap=0.8.4=py_0
   - appdirs=1.4.3=py36h28b3542_0
   - appnope=0.1.0=py36hf537a9a_0
-  - arrow-cpp=0.13.0=py36h29c365f_3
+  - arrow-cpp=0.11.1=py36hc2947fe_0
   - asn1crypto=0.24.0=py36_0
   - async-timeout=3.0.1=py36_0
   - attrs=19.1.0=py36_1
@@ -33,7 +33,7 @@ dependencies:
   - cachetools=2.1.0=py_0
   - cairo=1.14.12=hc4e6be7_4
   - cctools=895=1
-  - certifi=2019.3.9=py36_0
+  - certifi=2019.6.16=py36_0
   - cffi=1.12.3=py36hb5b8e2f_0
   - chardet=3.0.4=py36_1
   - clang=4.0.1=1
@@ -43,8 +43,8 @@ dependencies:
   - click=7.0=py36_0
   - compiler-rt=4.0.1=hcfea43d_1
   - configargparse=0.14.0=py36_0
-  - cryptography=2.6.1=py36ha12b0ac_0
-  - curl=7.64.1=ha441bb4_0
+  - cryptography=2.3.1=py36hdbc3d79_0
+  - curl=7.61.1=ha441bb4_0
   - cycler=0.10.0=py36hfc81398_0
   - datrie=0.7.1=py36h1de35cc_1
   - decorator=4.4.0=py36_1
@@ -65,7 +65,7 @@ dependencies:
   - gitdb2=2.0.5=py36_0
   - gitpython=2.1.11=py36_0
   - glib=2.56.2=hd9629dc_0
-  - glog=0.4.0=h6de7cb9_0
+  - glog=0.3.5=h0a44026_1
   - google-api-core=1.11.0=py36_0
   - google-auth=1.6.3=py_0
   - google-cloud-core=1.0.0=py_0
@@ -91,12 +91,14 @@ dependencies:
   - jupyter_client=5.2.4=py36_0
   - jupyter_core=4.4.0=py36_0
   - kiwisolver=1.1.0=py36h0a44026_0
-  - krb5=1.16.1=hddcf347_7
+  - krb5=1.16.1=h24a3359_6
   - ld64=274.2=1
-  - libcurl=7.64.1=h051b688_0
+  - libboost=1.67.0=hebc422b_4
+  - libcurl=7.61.1=hf30b1f0_0
   - libcxx=4.0.1=hcfea43d_1
   - libcxxabi=4.0.1=hcfea43d_1
   - libedit=3.1.20181209=hb402a30_0
+  - libevent=2.1.8=h58d6694_0
   - libffi=3.2.1=h475c297_4
   - libgfortran=3.0.1=h93005f0_2
   - libiconv=1.15=hdd342a3_7
@@ -104,7 +106,7 @@ dependencies:
   - libpng=1.6.37=ha441bb4_0
   - libprotobuf=3.7.1=hd9629dc_0
   - libsodium=1.0.16=h3efe00b_0
-  - libssh2=1.8.2=ha12b0ac_0
+  - libssh2=1.8.0=h322a93b_4
   - libtiff=4.0.9=he6b73bb_1
   - libxml2=2.9.9=hab757c2_0
   - llvm=4.0.1=1
@@ -126,7 +128,7 @@ dependencies:
   - notebook=5.7.8=py36_0
   - numpy=1.16.3=py36hacdab7b_0
   - numpy-base=1.16.3=py36h6575580_0
-  - openssl=1.1.1c=h1de35cc_1
+  - openssl=1.0.2s=h1de35cc_0
   - pandas=0.24.2=py36h0a44026_0
   - pandoc=2.2.3.2=0
   - pandocfilters=1.4.2=py36_1
@@ -149,7 +151,7 @@ dependencies:
   - protobuf=3.7.1=py36h0a44026_0
   - psutil=5.6.2=py36h1de35cc_0
   - ptyprocess=0.6.0=py36_0
-  - pyarrow=0.13.0=py36hb37e6aa_0
+  - pyarrow=0.11.1=py36h0a44026_0
   - pyasn1=0.4.5=py_0
   - pyasn1-modules=0.2.4=py36_0
   - pycparser=2.19=py36_0
@@ -161,7 +163,7 @@ dependencies:
   - pyrsistent=0.14.11=py36h1de35cc_0
   - pysftp=0.2.9=py_1
   - pysocks=1.7.0=py36_0
-  - python=3.6.8=haf84260_0
+  - python=3.6.6=hc167b69_0
   - python-dateutil=2.8.0=py36_0
   - python-irodsclient=0.7.0=py_0
   - pytz=2019.1=py_0
@@ -176,6 +178,7 @@ dependencies:
   - r-bindr=0.1.1=r351hf348343_0
   - r-bindrcpp=0.2.2=r351h32998d9_0
   - r-boot=1.3_20=r351hf348343_0
+  - r-brew=1.0_6=r351hf348343_4
   - r-broom=0.5.0=r351hf348343_0
   - r-callr=2.0.4=r351hf348343_0
   - r-caret=6.0_80=r351h6402f54_0
@@ -186,6 +189,7 @@ dependencies:
   - r-cluster=2.0.7_1=r351h0b560c1_0
   - r-codetools=0.2_15=r351hf348343_0
   - r-colorspace=1.3_2=r351h6402f54_0
+  - r-commonmark=1.5=r351h6402f54_0
   - r-crayon=1.3.4=r351hf348343_0
   - r-curl=3.2=r351h6402f54_0
   - r-cvst=0.2_2=r351hf348343_0
@@ -195,6 +199,8 @@ dependencies:
   - r-ddalpha=1.3.4=r351h4496799_0
   - r-debugme=1.1.0=r351hf348343_0
   - r-deoptimr=1.0_8=r351hf348343_0
+  - r-desc=1.2.0=r351hf348343_0
+  - r-devtools=1.13.6=r351hf348343_0
   - r-dichromat=2.0_0=r351hf348343_4
   - r-digest=0.6.15=r351h6402f54_0
   - r-dimred=0.1.0=r351hf348343_0
@@ -215,6 +221,7 @@ dependencies:
   - r-ggalluvial=0.9.1=r351h6115d3f_1000
   - r-ggplot2=3.1.1=r351h6115d3f_0
   - r-ggridges=0.5.1=r351h6115d3f_1000
+  - r-git2r=0.23.0=r351h6402f54_0
   - r-glmnet=2.0_16=r351h0b560c1_0
   - r-glue=1.3.1=r351h46e59ec_0
   - r-gower=0.1.2=r351h6402f54_0
@@ -248,6 +255,7 @@ dependencies:
   - r-markdown=0.8=r351h6402f54_0
   - r-mass=7.3_50=r351h6402f54_0
   - r-matrix=1.2_14=r351h6402f54_0
+  - r-memoise=1.1.0=r351hf348343_0
   - r-mgcv=1.8_24=r351h6402f54_0
   - r-mime=0.5=r351h6402f54_0
   - r-mnormt=1.5_5=r351h0b560c1_0
@@ -257,10 +265,12 @@ dependencies:
   - r-nlme=3.1_137=r351h0b560c1_0
   - r-nnet=7.3_12=r351h6402f54_0
   - r-numderiv=2016.8_1=r351hf348343_0
-  - r-openssl=1.0.2=r351h46e59ec_1
+  - r-openssl=1.0.2=r351h6402f54_0
   - r-pbdzmq=0.3_3=r351h32998d9_0
   - r-pillar=1.4.0=h6115d3f_0
+  - r-pkgbuild=1.0.0=r351hf348343_0
   - r-pkgconfig=2.0.2=r351h6115d3f_1001
+  - r-pkgload=1.0.0=r351h32998d9_0
   - r-plogr=0.2.0=r351hf348343_0
   - r-pls=2.6_0=r351hf348343_0
   - r-plyr=1.8.4=r351h32998d9_0
@@ -290,6 +300,7 @@ dependencies:
   - r-rlang=0.3.4=r351h159158b_0
   - r-rmarkdown=1.10=r351hf348343_0
   - r-robustbase=0.93_2=r351h0b560c1_0
+  - r-roxygen2=6.1.0=r351h32998d9_0
   - r-rpart=4.1_13=r351h6402f54_0
   - r-rprojroot=1.3_2=r351hf348343_0
   - r-rstudioapi=0.7=r351hf348343_0
@@ -347,7 +358,7 @@ dependencies:
   - terminado=0.8.2=py36_0
   - testpath=0.4.2=py36_0
   - textwrap3=0.9.2=py_0
-  - thrift-cpp=0.12.0=hdedcb34_1002
+  - thrift-cpp=0.11.0=h443fa2d_3
   - tk=8.6.8=ha441bb4_0
   - tktable=2.10=h1de35cc_0
   - tornado=6.0.2=py36h1de35cc_0
