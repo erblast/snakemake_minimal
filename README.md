@@ -1,3 +1,7 @@
+[![Snakemake](https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
+[![gitrepo](https://icon-library.net/images/github-logo-icon/github-logo-icon-28.jpg)](https://github.com/erblast/snakemake_minimal)
+[snakemake report](https://erblast.github.io/snakemake_minimal/)
+
 # snakemake minimal workflow
 In `Snakefile` a set of rules are supplied on the basis of which output files are
 supposed to be produced by the workflow.
@@ -5,6 +9,12 @@ supposed to be produced by the workflow.
 It is customary to start with `rule all` a blank rule that uses all final output files as input files.
 `snakemake` will go through the rest of the rules and create an execution sequence for all rules based
 on the first rule. It will also determine which steps can be executed in parallel.
+
+## Run in docker container
+
+```
+docker run -it --rm -v "$PWD":/app erblast/r_conda_snakemake_pkgs
+```
 
 ## Execute
 ```shell
@@ -55,13 +65,21 @@ snakemake -R `snakemake --list-code-changes` --use-conda --cores 3
 
 ## Visualize workflow
 ```shell
-snakemake --dag | dot -Tpng > ./wflow/wflow.png
+snakemake --dag | dot -Tpng > ./docs/wflow.png
 ```
 
-![](./wflow/wflow.png)
+![](./docs/wflow.png)
+
+
+## Build Report
+
+```
+snakemake --report docs/index.html
+```
+
 
 ## YAML configuration file
-`config.yaml`
+`config.yml`
 
 # Shell vs Scripts
 Scripts in `R` and `python` have access to a `snakemake` object carrying all rule
@@ -84,6 +102,9 @@ to notebooks because there is no doubt about the execution state.
 
 ** the rules for rendering notebooks are not compatible with `nb_conda` as is.**
 
+# Testing
+
+All common R functions are collected in an R package under utilR which is checked and tested
 
 ## Benchmarking
 Execution times of each rule are stored in `./benchmark`. Can be defined in `Snakefile`

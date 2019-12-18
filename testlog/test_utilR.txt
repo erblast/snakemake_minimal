@@ -1,8 +1,10 @@
-✔ | OK F W S | Context
-⠏ |  0       | embedded[1] "embedded packages are great for testing"
-⠋ |  1       | embedded✔ |  1       | embedded
+✔ |  OK F W S | Context
+⠏ |   0       | embedded[1] "embedded packages are great for testing"
+✔ |   1       | embedded
 
 ══ Results ═════════════════════════════════════════════════════════════════════
+Duration: 0.1 s
+
 OK:       1
 Failed:   0
 Warnings: 0
