@@ -1,5 +1,6 @@
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
-[![gitrepo](https://icon-library.net/images/github-logo-icon/github-logo-icon-28.jpg)](https://github.com/erblast/snakemake_minimal)
+[![Build Status](https://travis-ci.org/erblast/snakemake_minimal.svg?branch=master)](https://travis-ci.org/erblast/snakemake_minimal)
+[![gitrepo](https://icons-for-free.com/iconfiles/png/128/git+github+icon-1320191654571298174.png)](https://github.com/erblast/snakemake_minimal)
 [snakemake report](https://erblast.github.io/snakemake_minimal/)
 
 # snakemake minimal workflow

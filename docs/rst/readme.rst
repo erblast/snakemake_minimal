@@ -1,4 +1,4 @@
-|Snakemake| |gitrepo| `snakemake
+|Snakemake| |Build Status| |gitrepo| `snakemake
 report <https://erblast.github.io/snakemake_minimal/>`__
 
 snakemake minimal workflow
@@ -84,7 +84,7 @@ Visualize workflow
 
    snakemake --dag | dot -Tpng > ./docs/wflow.png
 
-|image2|
+|image3|
 
 Build Report
 ------------
@@ -151,6 +151,8 @@ https://bitbucket.org/snakemake/snakemake/issues/917/enable-stdout-and-stderr-re
 
 .. |Snakemake| image:: https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat
    :target: https://snakemake.readthedocs.io
-.. |gitrepo| image:: https://icon-library.net/images/github-logo-icon/github-logo-icon-28.jpg
+.. |Build Status| image:: https://travis-ci.org/erblast/snakemake_minimal.svg?branch=master
+   :target: https://travis-ci.org/erblast/snakemake_minimal
+.. |gitrepo| image:: https://icons-for-free.com/iconfiles/png/128/git+github+icon-1320191654571298174.png
    :target: https://github.com/erblast/snakemake_minimal
-.. |image2| image:: ./docs/wflow.png
+.. |image3| image:: ./docs/wflow.png
