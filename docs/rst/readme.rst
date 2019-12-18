@@ -1,5 +1,5 @@
-|Snakemake| |Build Status| |gitrepo| `snakemake
-report <https://erblast.github.io/snakemake_minimal/>`__
+|Snakemake| |Build Status| `snakemake
+report <https://erblast.github.io/snakemake_minimal/>`__ |gitrepo|
 
 snakemake minimal workflow
 ==========================
